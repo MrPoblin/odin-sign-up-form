@@ -71,7 +71,7 @@ a:visited {
     color: var(--white);
 }
 
-body{
+form{
     display: flex;
 }
 
