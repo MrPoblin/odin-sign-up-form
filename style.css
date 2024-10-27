@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+:root{
+    --white: white;
+    --padding: 4rem;
+    --button-color: rgb(185, 143, 88);
+}
+
+*{
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+a:link,
+a:visited {
+    color: var(--white);
+}
+
+body{
+    display: flex;
+}
+
+.left{
+    height: 100vh;
+    background: url(norse.jpg);
+    flex: 0 0 37vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+}
+
+.right{
+    flex: 1;
+    background-color: #f9fafb;
+    padding: 14rem;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.credits{
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.title{
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 1rem 12rem;
+    position: relative;
+    top: 20vh;
+
+}
+
+.odin{
+    color: var(--white);
+    font-family: norsebold, sans-serif;
+    font-size: 8rem;
+}
+
+.odin-pic{
+    height: 11rem;
+}
+
+.login:visited,
+.login:link{
+    color: var(--button-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.form{
+    background-color: var(--white);
+    height: 24rem;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 30rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.274);
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-left: var(--padding);
+    padding-right: 20rem;
+}
+
+button{
+    margin-left: var(--padding);
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--button-color);
+    width: 13rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.527);
+}
+
+.already{
+    padding-left: var(--padding);
+    font-weight: 500;
+}
+
+.label{
+    font-size: 0.8rem;
+    font-family: monospace;
+    font-weight: 800;
+}
+
+.inputs{
+    padding-left: var(--padding);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 6rem;
+}
+
+
+input{
+    width: 20rem;
+    height: 2.5rem;
+    border-color: #e8e9ed;
+    border-radius: 5px;
+
+}
+
+input:invalid{
+    border-color: red;
+}
